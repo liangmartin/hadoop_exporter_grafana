@@ -12,6 +12,7 @@ usage: hadoop_jmx_exporter.py [-h] -cluster cluster_name
                               [-queue yarn_queue_regexp]
                               [-nns [namenode_jmx_url [namenode_jmx_url ...]]]
                               [-rms [resourcemanager_jmx_url [resourcemanager_jmx_url ...]]]
+                              [-hss [hiveserver_jmx_url [hiveserver_jmx_url ...]]]
                               [-jns [journalnode_jmx_url [journalnode_jmx_url ...]]]
                               [-host host] [-port port]
 
