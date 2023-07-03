@@ -4,7 +4,7 @@
 
 ## 1.监控方式 
 
-![image-20230619171201638](.\images\image-20230619171201638.png)
+![image-20230619171201638](https://github.com/liangmartin/hadoop_exporter_grafana/blob/master/images/image-20230619171201638.png)
 
 ## 2.Python脚本
 
