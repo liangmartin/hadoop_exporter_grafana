@@ -65,6 +65,7 @@ def parse_args():
     parser.add_argument('-nns', required=False, metavar='namenode_jmx_url', help='Hadoop hdfs namenode jmx metrics URL.', nargs="*")
     parser.add_argument('-rms', required=False, metavar='resourcemanager_jmx_url', help='Hadoop resourcemanager metrics jmx URL.', nargs="*")
     parser.add_argument('-jns', required=False, metavar='journalnode_jmx_url', help='Hadoop journalnode jmx metrics URL.', nargs="*")
+    parser.add_argument('-hss', required=False, metavar='hiveserver_jmx_url', help='Hive Hiveserver2 jmx metrics URL.', nargs="*")
     parser.add_argument('-host', required=False, metavar='host', help='Listen on this address. default: 0.0.0.0', default='0.0.0.0')
     parser.add_argument('-port', required=False, metavar='port', type=int, help='Listen to this port. default: 6688', default=6688)
     return parser.parse_args()

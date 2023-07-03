@@ -27,6 +27,8 @@ optional arguments:
                         Hadoop hdfs namenode jmx metrics URL.
   -rms [resourcemanager_jmx_url [resourcemanager_jmx_url ...]]
                         Hadoop resourcemanager metrics jmx URL.
+  -hss [hiveserver_jmx_url [hiveserver_jmx_url ...]]
+                        Hive Hiveserver2 jmx metrics URL.
   -jns [journalnode_jmx_url [journalnode_jmx_url ...]]
                         Hadoop journalnode jmx metrics URL.
   -host host            Listen on this address. default: 0.0.0.0
