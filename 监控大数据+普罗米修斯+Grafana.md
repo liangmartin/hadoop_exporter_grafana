@@ -66,7 +66,7 @@ RMNMInfo.json
 
 
 
-3.7 hiveserver2
+### 3.7 hiveserver2
 
 ```
 hiveserver2.json
@@ -74,6 +74,30 @@ kafka-metrics-count.json
 producer-metrics.json
 producer-node-metrics.json
 producer-topic-metrics.json
+```
+
+
+
+### 3.8 hbase-master
+
+```
+AssignmentManger.json
+Balancer.json
+FileSystem.json
+IPC.json
+Procedure.json
+Server.json
+```
+
+### 3.9 regionserver
+
+```
+IPC.json
+Regions.json
+Replication.json
+Server.json
+Users.json
+WAL.json
 ```
 
 
@@ -9188,6 +9212,14 @@ from prometheus_client import start_http_server
 
 
 
+### 6.6 Hbase
+
+```
+使用grafana官网
+```
+
+
+
 # 如何使用？
 
 ```
@@ -9199,8 +9231,10 @@ usage: hadoop_jmx_exporter.py [-h] -cluster cluster_name
                               [-queue yarn_queue_regexp]
                               [-nns [namenode_jmx_url [namenode_jmx_url ...]]]
                               [-rms [resourcemanager_jmx_url [resourcemanager_jmx_url ...]]]
-                              [-jns [journalnode_jmx_url [journalnode_jmx_url ...]]]
                               [-hss [hiveserver_jmx_url [hiveserver_jmx_url ...]]]
+                              [-jns [journalnode_jmx_url [journalnode_jmx_url ...]]]
+                              [-hbs [hbase_server_url [hbase_server_url ...]]]
+                              [-hrs [hbase_region_url [hbase_region_url ...]]]
                               [-host host] [-port port]
 
 hadoop jmx metric prometheus exporter
@@ -9215,10 +9249,14 @@ optional arguments:
                         Hadoop hdfs namenode jmx metrics URL.
   -rms [resourcemanager_jmx_url [resourcemanager_jmx_url ...]]
                         Hadoop resourcemanager metrics jmx URL.
-  -jns [journalnode_jmx_url [journalnode_jmx_url ...]]
-                        Hadoop journalnode jmx metrics URL.
   -hss [hiveserver_jmx_url [hiveserver_jmx_url ...]]
                         Hive Hiveserver2 jmx metrics URL.
+  -hbs [hbase_server_url [hbase_server_url ...]]
+                        Hive Hbase Server jmx metrics URL.
+  -hrs [hbase_region_url [hbase_region_url ...]]
+                        Hive Hbase regionServer jmx metrics URL.
+  -jns [journalnode_jmx_url [journalnode_jmx_url ...]]
+                        Hadoop journalnode jmx metrics URL.
   -host host            Listen on this address. default: 0.0.0.0
   -port port            Listen to this port. default: 6688
 ```

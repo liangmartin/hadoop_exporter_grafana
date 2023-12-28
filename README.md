@@ -14,6 +14,8 @@ usage: hadoop_jmx_exporter.py [-h] -cluster cluster_name
                               [-rms [resourcemanager_jmx_url [resourcemanager_jmx_url ...]]]
                               [-hss [hiveserver_jmx_url [hiveserver_jmx_url ...]]]
                               [-jns [journalnode_jmx_url [journalnode_jmx_url ...]]]
+                              [-hbs [hbase_server_url [hbase_server_url ...]]]
+                              [-hrs [hbase_region_url [hbase_region_url ...]]]
                               [-host host] [-port port]
 
 hadoop jmx metric prometheus exporter
@@ -30,6 +32,10 @@ optional arguments:
                         Hadoop resourcemanager metrics jmx URL.
   -hss [hiveserver_jmx_url [hiveserver_jmx_url ...]]
                         Hive Hiveserver2 jmx metrics URL.
+  -hbs [hbase_server_url [hbase_server_url ...]]
+                        Hive Hbase Server jmx metrics URL.
+  -hrs [hbase_region_url [hbase_region_url ...]]
+                        Hive Hbase regionServer jmx metrics URL.
   -jns [journalnode_jmx_url [journalnode_jmx_url ...]]
                         Hadoop journalnode jmx metrics URL.
   -host host            Listen on this address. default: 0.0.0.0

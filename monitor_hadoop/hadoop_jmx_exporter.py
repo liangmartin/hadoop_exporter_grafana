@@ -13,6 +13,8 @@ from hdfs_journalnode import JournalNodeMetricCollector
 from yarn_resourcemanager import ResourceManagerMetricCollector
 from yarn_nodemanager import NodeManagerMetricCollector
 from hive_server import HiveServerMetricCollector
+from hbase_master import HBaseMasterMetricCollector
+from hbase_regionserver import HBaseRegionServerMetricCollector
 
 logger = get_module_logger(__name__)
 
@@ -32,6 +34,10 @@ def register_prometheus(cluster, args):
         REGISTRY.register(JournalNodeMetricCollector(cluster, args.jns))
     if args.hss is not None and len(args.hss) > 0:
         REGISTRY.register(HiveServerMetricCollector(cluster, args.hss))
+    if args.hbs is not None and len(args.hbs) > 0:
+        REGISTRY.register(HBaseMasterMetricCollector(cluster, args.hbs))
+    if args.hbs is not None and len(args.hrs) > 0:
+        REGISTRY.register(HBaseRegionServerMetricCollector(cluster, args.hrs))
         
 def main():
     args = utils.parse_args()
